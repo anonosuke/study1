@@ -1,0 +1,11 @@
+<p>
+  入力値:{{fromChildValue}}
+</p>
+
+<input type="text" value="{{parentData}}" (change)="changeValue()">
+
+<input type="radio" id="Number" value=1 (click)="onClick($event)">1
+<input type="radio" id="Number" value=2 (click)="onClick($event)">2
+<input type="radio" id="Number" value=3 (click)="onClick($event)">3
+<input type="radio" id="Number" value=4 (click)="onClick($event)">4
+<app-child1 [num]="parentData" (outputEvent)="onReceiveEventFromChild($event)"></app-child1>
