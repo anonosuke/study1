@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,7 @@ import { Child1Component } from './components/child1/child1.component';
 import { Parent2Component } from './components/parent2/parent2.component';
 import { ChildAComponent } from './components/child-a/child-a.component';
 import { ChildBComponent } from './components/child-b/child-b.component';
+import { GetapiComponent } from './components/getapi/getapi.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,14 @@ import { ChildBComponent } from './components/child-b/child-b.component';
     Parent2Component,
     ChildAComponent,
     ChildBComponent,
+    GetapiComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
