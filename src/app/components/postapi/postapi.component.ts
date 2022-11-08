@@ -17,7 +17,7 @@ export class PostapiComponent implements OnInit {
 
   ngOnInit() {
     this.http
-      .post<Article>('https://reqres.in/api/users', {
+      .post<any>('https://reqres.in/api/users', {
         name: "au",
         job: "member"
       })
@@ -30,9 +30,9 @@ export class PostapiComponent implements OnInit {
   }
 }
 
-interface Article {
+/* interface Abc {
 name: string,
 job: string,
 id : number,
 createdAt : string
-}
+} */

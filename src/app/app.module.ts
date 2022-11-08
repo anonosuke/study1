@@ -13,6 +13,8 @@ import { ChildAComponent } from './components/child-a/child-a.component';
 import { ChildBComponent } from './components/child-b/child-b.component';
 import { GetapiComponent } from './components/getapi/getapi.component';
 import { PostapiComponent } from './components/postapi/postapi.component';
+import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
+import { CycleparentComponent } from './components/cycleparent/cycleparent.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { PostapiComponent } from './components/postapi/postapi.component';
     ChildBComponent,
     GetapiComponent,
     PostapiComponent,
+    LifecycleComponent,
+    CycleparentComponent,
   ],
   imports: [
     BrowserModule,
