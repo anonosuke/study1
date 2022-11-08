@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChildAComponent } from './child-a.component';
+import { TwoWayBindingComponent } from './two-way-binding.component';
 
-describe('ChildAComponent', () => {
-  let component: ChildAComponent;
-  let fixture: ComponentFixture<ChildAComponent>;
+describe('TwoWayBindingComponent', () => {
+  let component: TwoWayBindingComponent;
+  let fixture: ComponentFixture<TwoWayBindingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChildAComponent ]
+      declarations: [ TwoWayBindingComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ChildAComponent);
+    fixture = TestBed.createComponent(TwoWayBindingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

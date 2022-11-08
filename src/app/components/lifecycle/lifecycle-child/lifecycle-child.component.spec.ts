@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostapiComponent } from './postapi.component';
+import { LifecycleChildComponent } from './lifecycle-child.component';
 
-describe('PostapiComponent', () => {
-  let component: PostapiComponent;
-  let fixture: ComponentFixture<PostapiComponent>;
+describe('LifecycleChildComponent', () => {
+  let component: LifecycleChildComponent;
+  let fixture: ComponentFixture<LifecycleChildComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostapiComponent ]
+      declarations: [ LifecycleChildComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PostapiComponent);
+    fixture = TestBed.createComponent(LifecycleChildComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

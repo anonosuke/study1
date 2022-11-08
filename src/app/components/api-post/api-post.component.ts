@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-postapi',
-  templateUrl: './postapi.component.html',
-  styleUrls: ['./postapi.component.css']
+  selector: 'app-api-post',
+  templateUrl: './api-post.component.html',
+  styleUrls: ['./api-post.component.css']
 })
-export class PostapiComponent implements OnInit {
+export class ApiPostComponent implements OnInit {
+
 
   constructor(private http: HttpClient) { }
 

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl} from '@angular/forms';
-import { NameService } from '../../name.service';
+import { NameService } from '../../../service/name.service';
 
 @Component({
-  selector: 'app-child-a',
-  templateUrl: './child-a.component.html',
-  styleUrls: ['./child-a.component.css']
+  selector: 'app-child1',
+  templateUrl: './child1.component.html',
+  styleUrls: ['./child1.component.css']
 })
-export class ChildAComponent implements OnInit {
+export class Child1Component implements OnInit {
 
   constructor(private NameService: NameService,private fb: FormBuilder) { }
 

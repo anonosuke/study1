@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
-import { Parent1Component } from './components/parent1/parent1.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 
 const routes: Routes = [
   { path: 'main', component: MainComponent },
-  { path: 'parent1', component: Parent1Component },
+  { path: 'parent1', component: TwoWayBindingComponent },
 ];
 
 @NgModule({

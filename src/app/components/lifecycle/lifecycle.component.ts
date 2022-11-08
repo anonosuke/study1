@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-lifecycle',
@@ -6,39 +6,15 @@ import { Component, OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentCh
   styleUrls: ['./lifecycle.component.css']
 })
 export class LifecycleComponent implements OnInit {
+
   constructor() { }
 
-  @Input() num: number = 0;
-//ライフサイクル順になっています
-  ngOnChanges() {
-    alert("ngOnChanges");
+    public parentData: number = 0;
+
+  ngOnInit(): void {
   }
 
-  ngOnInit() {
-    alert("ngOnInit");
-  }
-
-  ngDoCheck() {
-    alert("ngDoCheck");
-  }
-
-  ngAfterContentInit() {
-    alert("ngAfterContentInit");
-  }
-
-  ngAfterContentChecked() {
-    alert("ngAfterContentChecked");
-  }
-
-  ngAfterViewInit() {
-    alert("ngAfterViewInit");
-  }
-
-  ngAfterViewChecked() {
-    alert("ngAfterViewChecked");
-  }
-
-  ngOnDestroy() {
-    alert("ngOnDestroy");
+  onClick(event: any) {
+    this.parentData = event.target.value;
   }
 }

@@ -5,30 +5,30 @@ import { HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { MainComponent } from './main/main.component';
-import { Parent1Component } from './components/parent1/parent1.component';
-import { Child1Component } from './components/child1/child1.component';
-import { Parent2Component } from './components/parent2/parent2.component';
-import { ChildAComponent } from './components/child-a/child-a.component';
-import { ChildBComponent } from './components/child-b/child-b.component';
-import { GetapiComponent } from './components/getapi/getapi.component';
-import { PostapiComponent } from './components/postapi/postapi.component';
+import { MainComponent } from './/main/main.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
-import { CycleparentComponent } from './components/cycleparent/cycleparent.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+import { ChildComponent } from './components/two-way-binding/child/child.component';
+import { TwoWayBindingServiceComponent } from './components/two-way-binding-service/two-way-binding-service.component';
+import { Child1Component } from './components/two-way-binding-service/child1/child1.component';
+import { Child2Component } from './components/two-way-binding-service/child2/child2.component';
+import { ApiGetComponent } from './components/api-get/api-get.component';
+import { ApiPostComponent } from './components/api-post/api-post.component';
+import { LifecycleChildComponent } from './components/lifecycle/lifecycle-child/lifecycle-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    Parent1Component,
-    Child1Component,
-    Parent2Component,
-    ChildAComponent,
-    ChildBComponent,
-    GetapiComponent,
-    PostapiComponent,
     LifecycleComponent,
-    CycleparentComponent,
+    TwoWayBindingComponent,
+    ChildComponent,
+    TwoWayBindingServiceComponent,
+    Child1Component,
+    Child2Component,
+    ApiGetComponent,
+    ApiPostComponent,
+    LifecycleChildComponent,
   ],
   imports: [
     BrowserModule,
