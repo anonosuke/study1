@@ -12,6 +12,7 @@ import { Parent2Component } from './components/parent2/parent2.component';
 import { ChildAComponent } from './components/child-a/child-a.component';
 import { ChildBComponent } from './components/child-b/child-b.component';
 import { GetapiComponent } from './components/getapi/getapi.component';
+import { PostapiComponent } from './components/postapi/postapi.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { GetapiComponent } from './components/getapi/getapi.component';
     ChildAComponent,
     ChildBComponent,
     GetapiComponent,
+    PostapiComponent,
   ],
   imports: [
     BrowserModule,
