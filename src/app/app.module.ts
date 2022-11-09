@@ -5,7 +5,7 @@ import { HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { MainComponent } from './/main/main.component';
+import { MainComponent } from './components/main/main.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { ChildComponent } from './components/two-way-binding/child/child.component';

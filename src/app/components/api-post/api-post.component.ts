@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ApiService } from '../../service/api.service';
 
 @Component({
   selector: 'app-api-post',
@@ -9,12 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiPostComponent implements OnInit {
 
 
-  constructor(private http: HttpClient) { }
-
-  name = ""
-  job = ""
-  id = 0
-  createdAt = ""
+  constructor(private http: HttpClient, private service: ApiService) { }
 
   ngOnInit() {
     this.http
@@ -23,15 +19,35 @@ export class ApiPostComponent implements OnInit {
         job: "member"
       })
       .subscribe((response) => {
-        this.name = response.name,
-        this.job = response.job,
-        this.id = response.id,
-        this.createdAt = response.createdAt;
+        this.service.name = response.name,
+        this.service.job = response.job,
+        this.service.id = response.id,
+        this.service.createdAt = response.createdAt;
       });
+  }
+
+  get name(){
+    return `${this.service.name}`
+  }
+
+  get job(){
+    return `${this.service.job}`
+  }
+
+  get id(){
+    return `${this.service.id}`
+  }
+
+  get createdAt(){
+    return `${this.service.createdAt}`
   }
 }
 
-/* interface Abc {
+
+
+/*
+.post後anyでは無く方宣言をする場合は、後に指定の型を記載します。
+interface Abc {
 name: string,
 job: string,
 id : number,
