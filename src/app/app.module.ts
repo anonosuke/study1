@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http'
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +16,7 @@ import { Child2Component } from './components/two-way-binding-service/child2/chi
 import { ApiGetComponent } from './components/api-get/api-get.component';
 import { ApiPostComponent } from './components/api-post/api-post.component';
 import { LifecycleChildComponent } from './components/lifecycle/lifecycle-child/lifecycle-child.component';
+import { MockapiService } from './service/mockapi.service';
 
 @NgModule({
   declarations: [
@@ -35,9 +37,13 @@ import { LifecycleChildComponent } from './components/lifecycle/lifecycle-child/
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      MockapiService, { dataEncapsulation: false }
+)
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

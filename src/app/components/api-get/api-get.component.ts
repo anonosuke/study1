@@ -14,8 +14,13 @@ export class ApiGetComponent implements OnInit {
   useragent=""
 
   ngOnInit() {
-    this.service
+/*     this.service
       .apiGet('/user-agent')
-      .subscribe((response: any) => this.useragent = response["user-agent"]);
+      .subscribe((response: any) => this.useragent = response["user-agent"]); */
+
+/*     this.http.get('https://httpbin.org/user-agent').subscribe((response: any) => console.log(response)); */
+
+/*     this.service.apiGet('worker').subscribe((response: any) => console.log(response)) */
+    this.http.get('http://localhost:8000/mock-server/worker').subscribe((response: any) => console.log(response));
   }
 }

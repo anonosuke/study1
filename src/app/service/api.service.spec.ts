@@ -13,15 +13,28 @@ describe('ApiService', () => {
     service = TestBed.inject(ApiService);
   });
 
-  it('getの返り値を確認する', () => {
+/*   it('getの返り値を確認する', () => {
     service.apiGet('/user-agent').subscribe((response :any) => expect(response).toContain({
       "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
       }))
-  });
+  }); */
 
-  it('postの返り値を確認する', () => {
+/*   it('postの返り値を確認する', () => {
     service.apiPost('/api/users', {name: 'au',job: 'member'}).subscribe((response: any) => {
       expect(response).toContain('au member 692 2022-11-15T00:24:29.850Z')
     })
+  }); */
+
+  it('モックサーバーを作成したテスト', () => {
+    service.apiGet('worker').subscribe((response: any) => console.log(response)/* expect(response).toContain({name: 'taro',job: 'member'},
+      {name: 'hana',job: 'member'}) */)
   });
+/*   it('スタブを使ったテスト', () => {
+    let apiget: apiGet;
+    const apiGetServiceSpy = jasmine.createSpyObj('user', ['getValue']);
+    const stubValue ='スタブテスト';
+    apiGetServiceSpy.getValue.and.returnValue(stubValue);
+
+    apiGet =
+  }) */
 });

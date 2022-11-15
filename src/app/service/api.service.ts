@@ -10,10 +10,13 @@ export class ApiService {
   constructor(private http: HttpClient){}
 
   apiGet(path: any){
-    return this.http.get(environment.apiGetUrl + path);
+    const serverUrl = environment.production ? environment.apiGetUrl : 'mock-server/';
+    return this.http.get(serverUrl + path);
+    /* return this.thhp.get(environment.apiGetUrl + path); */
   }
 
   apiPost/* <T> */(path: any, parameter: object){
     return this.http.post<any>/* <T> */(environment.apiPostUrl + path, parameter)
   }
+
 }
