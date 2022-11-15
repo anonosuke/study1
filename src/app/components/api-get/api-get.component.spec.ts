@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ApiGetComponent } from './api-get.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ApiGetComponent', () => {
   let component: ApiGetComponent;
@@ -8,7 +8,8 @@ describe('ApiGetComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ApiGetComponent ]
+      declarations: [ ApiGetComponent ],
+      imports: [ HttpClientModule ]
     })
     .compileComponents();
 

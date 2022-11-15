@@ -1,4 +1,6 @@
 import { TestBed } from '@angular/core/testing';
+import { environment } from 'src/environments/environment';
+
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -26,6 +28,11 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('study1 app is running!');
+    const element = compiled.querySelector('.main') as HTMLLinkElement;
+
+    expect(element.getAttribute('href')).toContain(environment.rooting + '/main');
+    expect(compiled.querySelector('.twowaybinding')?.getAttribute('href')).toContain(environment.rooting + '/twowaybinding');
+    expect(compiled.querySelector('.twowaybindingservice')?.getAttribute('href')).toContain(environment.rooting +'/twowaybindingservice');
+    ///?は、オプショナルチェーン//
   });
 });

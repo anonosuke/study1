@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { TwoWayBindingComponent } from './two-way-binding.component';
 
@@ -17,7 +18,9 @@ describe('TwoWayBindingComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('onclickのテスト', () => {
+    const button = fixture.debugElement.query(By.css('.one')).nativeElement as HTMLButtonElement;
+    button.click();
+    expect(component.parentData as number).toContain(1);
   });
 });

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { LifecycleComponent } from './lifecycle.component';
+import { By } from '@angular/platform-browser';
 
 describe('LifecycleComponent', () => {
   let component: LifecycleComponent;
@@ -20,4 +20,10 @@ describe('LifecycleComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('onclickのテスト', () => {
+  const button = fixture.debugElement.query(By.css('.one')).nativeElement as HTMLButtonElement;
+  button.click();
+  expect(component.parentData as number).toContain(1);
+  })
 });
